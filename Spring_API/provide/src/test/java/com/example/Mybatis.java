@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 public class Mybatis {
     public static void main(String[] args) {
 
-        FastAutoGenerator.create("jdbc:mysql://124.221.224.125:3306/xs?serverTimezone=GMT%2B8&useSSL=true",
+        FastAutoGenerator.create("jdbc:mysql://124.221.224.125:3306/net_file?serverTimezone=GMT%2B8&useSSL=true",
                 "root",
                 "123456")
                 .globalConfig(builder -> {
@@ -17,10 +17,10 @@ public class Mybatis {
                 })
                 .packageConfig(builder -> {
                     builder.parent("com.example") // 设置父包名
-                            .moduleName("user");
+                            .moduleName("net_file");
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("xs");
+                    builder.addInclude("net_file");
                 })
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
                 .execute();

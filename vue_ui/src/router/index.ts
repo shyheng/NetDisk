@@ -1,24 +1,23 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import User from '../views/User.vue'
 import Index from '../views/Index.vue'
+import User from '../views/User.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'Home',
-    component: User
+    path: '/reg',
+    component:User
   },
   {
-    path:'/s',
-    name:'index',
+    name:'Index',
+    path:'/',
     component: Index
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 })
+
 
 export default router
