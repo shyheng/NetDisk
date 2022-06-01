@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NetDisk/Android_Application/app/src/main/res/layout/activity_index.xml" value="0.2046875" />
         <entry key="..\:/NetDisk/Android_Application/app/src/main/res/layout/activity_main.xml" value="0.2353846153846154" />
+        <entry key="..\:/NetDisk/Android_Application/app/src/main/res/layout/activity_reg.xml" value="0.19985569985569984" />
       </map>
     </option>
   </component>
