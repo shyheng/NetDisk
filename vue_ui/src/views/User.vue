@@ -31,7 +31,7 @@
     <br><br><br><br><br><br><br><br><br>
   </div>
 
-  <el-dialog v-model="LoginForm" title="登录" width="30%">
+  <el-dialog v-model="LoginForm" title="注册" width="30%">
     <el-form label-width="100px" style="max-width: 460px">
       <el-form-item label="用户名" >
         <el-input v-model="name" autocomplete="off" />

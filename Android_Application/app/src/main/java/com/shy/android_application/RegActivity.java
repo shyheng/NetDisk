@@ -3,9 +3,13 @@ package com.shy.android_application;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shy.android_application.util.API;
@@ -30,12 +34,23 @@ public class RegActivity extends AppCompatActivity {
     @BindView(R.id.pass1)
     EditText pass1;
 
+    @BindView(R.id.reg)
+    Button reg;
+
+    @BindView(R.id.tv_reg)
+    TextView tv_reg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg);
         ButterKnife.bind(this);
+        AssetManager mgr = getAssets();
+        Typeface tf = Typeface.createFromAsset(mgr, "fonts/but.ttf");
+        reg.setTypeface(tf);
 
+        Typeface loTf = Typeface.createFromAsset(mgr, "fonts/t-text.otf");
+        tv_reg.setTypeface(loTf);
     }
 
     @OnClick(R.id.login)
@@ -61,4 +76,5 @@ public class RegActivity extends AppCompatActivity {
             Toast.makeText(RegActivity.this,"密码不统一",Toast.LENGTH_SHORT).show();
         }
     }
+
 }

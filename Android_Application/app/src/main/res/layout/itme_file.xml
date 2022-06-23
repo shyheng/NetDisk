@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/fileN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="文件名"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/fileName"
+        android:textColor="#FF3030"
+        app:layout_constraintTop_toBottomOf="@id/fileN"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/dow"
+        android:textColor="@color/black"
+        android:text="下载"
+        android:typeface="monospace"
+        android:textSize="30dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toLeftOf="@id/del"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:textColor="@color/black"
+        android:text="删除"
+        android:id="@+id/del"
+        android:textSize="30dp"
+        android:typeface="normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/hr"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/fileName"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <View
+
+        android:background="#00FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

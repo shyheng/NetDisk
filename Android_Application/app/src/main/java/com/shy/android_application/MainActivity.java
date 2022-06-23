@@ -3,8 +3,11 @@ package com.shy.android_application;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.pass)
     EditText pass;
 
+    @BindView(R.id.login)
+    Button login;
+
+    @BindView(R.id.lo)
+    TextView lo;
+
     public static Integer token;
 
     @Override
@@ -33,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        AssetManager mgr = getAssets();
+        Typeface tf = Typeface.createFromAsset(mgr, "fonts/but.ttf");
+        login.setTypeface(tf);
 
+        Typeface loTf = Typeface.createFromAsset(mgr, "fonts/t-text.otf");
+        lo.setTypeface(loTf);
     }
 
     @OnClick(R.id.reg)
